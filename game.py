@@ -11,8 +11,8 @@ class Game:
         self.player1 = Player(0, "Cross (X)", False, "X")  
         self.player2 = Player(1, "Nought (O)", False, "O")
         self.root = tk.Tk()
-        x_image = Image.open("C:/Users/User/OneDrive/Desktop/Tic-Tac-Toe/Graphics/cross.png").resize((150, 150))
-        o_image = Image.open("C:/Users/User/OneDrive/Desktop/Tic-Tac-Toe/Graphics/nought.png").resize((205, 205))
+        x_image = Image.open("C:/Users/User/OneDrive/Desktop/Tic-Tac-Toe/Graphics/cross.png").resize((150, 150)) # Modify this path to the files where the graphics are
+        o_image = Image.open("C:/Users/User/OneDrive/Desktop/Tic-Tac-Toe/Graphics/nought.png").resize((205, 205)) # Modify this path to the files where the graphics are
         self.x_image = ImageTk.PhotoImage(x_image)
         self.o_image = ImageTk.PhotoImage(o_image)
         self.status = tk.Label(self.root, text="Player Status", font=("Helvetica", 17))
@@ -63,7 +63,7 @@ class Game:
         self.root.geometry("900x900")
         self.root.resizable(False, False) 
 
-        img = tk.PhotoImage(file="C:/Users/User/OneDrive/Desktop/Tic-Tac-Toe/Graphics/icon_tictactoe.png")
+        img = tk.PhotoImage(file="C:/Users/User/OneDrive/Desktop/Tic-Tac-Toe/Graphics/icon_tictactoe.png")  # Modify this path to the files where the graphics are
         self.root.iconphoto(False, img) 
 
         title_label = tk.Label(self.root, text="Tic Tac Toe", font=("Helvetica", 24))
