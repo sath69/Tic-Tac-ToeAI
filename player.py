@@ -36,19 +36,18 @@ class Player:
         rightDiagonalSet.add(gameUI[x][len(gameUI) - 1 - x])
        if len(rightDiagonalSet) == 1 and self.symbol in rightDiagonalSet:
           self.isWon = True
-
    
    def pick(self, gameUI, row, column):
+      
+      isPicked = False
       try:
        if gameUI[row-1][column-1] == "X" or gameUI[row-1][column-1] == "O":
           print("\nThat area has been already filled, please select another row and column.")
-          self.pick(gameUI)
+          return isPicked
        else:
          gameUI[row-1][column-1] = self.symbol
+         isPicked = True
+         return isPicked
       except Exception:
           print("\nYou must pick a row and column number between 1 and 3")
-          self.pick(gameUI)
-         
-   def won(self):
-      pass
-   
+          return isPicked
